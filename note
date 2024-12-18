@@ -1,0 +1,60 @@
+//Default To-Do Items:
+//to do list -> object  let x=typeof todolist   console.log(x)
+// const todolist=[
+//     // id_1
+//     {
+//         id:1,
+//         title:"I finished the javascript , congratulation to me",
+//         date:new Date().toDateString()
+//     },
+//     // id_2
+//     {
+//         id:2,
+//         title:"The Node.js language is my game",
+//         date:new Date().toDateString()
+//     }
+// ]
+
+//Shallow and Deep Copy
+//console.log(typeof copy_todolist); object
+//const copy_todolist=[...todolist];
+const copy_todolist=JSON.parse(JSON.stringify(todolist))
+copy_todolist[1].title="The First task in js"
+
+//Inheritance
+class Task{
+    constructor(id,title,date){
+        this.id=id;
+        this.title=title;
+        this.date=date
+    }
+}
+class SpecialTask extends Task{
+    constructor(id,title,date,priority){
+        super(id,title,date)
+        this.priority=priority
+    }
+}
+//Use these classes to structure the todoList.
+const todoList=[
+    new Task(1,"I finished the javascript , congratulation to me",new Date().toDateString()),
+    new SpecialTask(2,"The Node.js language is my game",new Date().toDateString(),"Medium")
+]
+
+
+
+
+
+
+
+
+
+// for(let i =0;i<todolist.length;i++){
+//     console.log(`The id is ${todolist[i].id} Title :  ${todolist[i].title} Date: ${todolist[i].date}`)
+// }
+// console.log("#########################")
+
+// for(let i =0;i<copy_todolist.length;i++){
+//     console.log(`The id is ${copy_todolist[i].id} Title :  ${copy_todolist[i].title} Date: ${copy_todolist[i].date}`)
+// }
+
