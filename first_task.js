@@ -4,7 +4,7 @@ class Task {
         this.id = id;
         this.title = title;
         this.date = date;
-        this.description = ""; // Initialize description as an empty string
+        this.description = ""; // Initialize description as an empty string 111
     }
 
     addDescription(description) {
